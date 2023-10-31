@@ -40,6 +40,11 @@ body {
   color: var(--white);
 }
 
+.note-search__input::placeholder {
+  color: var(--white);
+  font-size: 14px;
+}
+
 @media (min-width: 768px) {
   .note-search {
     width: fit-content;
@@ -47,11 +52,6 @@ body {
   .note-search__input {
     min-width: 500px;
   }
-}
-
-.note-search__input::placeholder {
-  color: var(--white);
-  font-size: 14px;
 }
 
 .note-search__button {
@@ -62,11 +62,6 @@ body {
   outline: unset;
   border: unset;
   color: var(--white);
-}
-
-.note-search__notfound {
-  margin: 20px auto;
-  text-align: center;
 }
 
 .note-input {
@@ -92,16 +87,6 @@ body {
   color: var(--white);
 }
 
-@media (min-width: 768px) {
-  .note-input__title,
-  .note-input__body {
-    min-width: 700px;
-  }
-  .note-input {
-    width: fit-content;
-  }
-}
-
 .note-input__max {
   margin-left: 10px;
   font-size: 12px;
@@ -123,6 +108,16 @@ body {
   font-size: 16px;
   font-weight: 500;
   text-transform: lowercase;
+}
+
+@media (min-width: 768px) {
+  .note-input__title,
+  .note-input__body {
+    min-width: 700px;
+  }
+  .note-input {
+    width: fit-content;
+  }
 }
 
 .note-input__submit {
@@ -163,6 +158,12 @@ body {
   .note-card-list__header {
     margin-left: 2.5%;
   }
+}
+
+.note-card-list__empty {
+  margin: 20px auto;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .note-card {

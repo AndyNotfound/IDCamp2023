@@ -93,15 +93,17 @@ class NoteApp extends React.Component {
                         onDeleteNote={this.onDeleteNoteHandler}
                         onArchiveNote={this.onArchiveNoteHandler}
                     /> :
-                    // <p className="note-search__notfound">No results were found ...</p>
                     ""
                 }
-                <NoteCardList
-                    header={"Notes"}
-                    notes={this.state.notes.filter(note => note.archived !== true)}
-                    onDeleteNote={this.onDeleteNoteHandler}
-                    onArchiveNote={this.onArchiveNoteHandler}
-                />
+                {!this.state.notes.length <= 0 ?
+                    <NoteCardList
+                        header={"Notes"}
+                        notes={this.state.notes.filter(note => note.archived !== true)}
+                        onDeleteNote={this.onDeleteNoteHandler}
+                        onArchiveNote={this.onArchiveNoteHandler}
+                    /> :
+                    <p className="note-card-list__empty">There's no notes at the moment, you can make one now!</p>
+                }
                 {!this.state.notes.filter(note => note.archived === true).length <= 0 ?
                     <NoteCardList
                         header={"Archived Notes"}

@@ -36,7 +36,15 @@ class NewNoteInput extends React.Component {
 
     onSubmitHandler(event) {
         event.preventDefault();
-        this.props.addNote(this.state);
+        if (this.state.title.trim().length === 0 && this.state.body.trim().length === 0) {
+            alert("The Notes can not be empty")
+        } else if (this.state.title.trim().length === 0) {
+            alert("The Note's title can not be empty")
+        } else if (this.state.body.trim().length === 0) {
+            alert("The Note's description can not be empty")
+        } else {
+            this.props.addNote(this.state);
+        }
         this.setState(() => {
             return {
                 title: '',
