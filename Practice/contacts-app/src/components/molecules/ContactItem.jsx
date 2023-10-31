@@ -14,11 +14,11 @@ function ContactItem({ imageUrl, name, tag, id, onDelete }) {
 }
 
 ContactItem.propTypes = {
-    imageUrl: PropTypes.string,
-    name: PropTypes.string,
-    tag: PropTypes.string,
-    id: PropTypes.number,
-    onDelete: PropTypes.func
+    imageUrl: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    onDelete: PropTypes.func.isRequired
 }
 
 export default ContactItem;

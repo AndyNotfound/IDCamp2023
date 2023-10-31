@@ -47,7 +47,7 @@ class ContactInput extends React.Component {
 }
 
 ContactInput.propTypes = {
-    addContact: PropTypes.func
+    addContact: PropTypes.func.isRequired
 }
 
 export default ContactInput
